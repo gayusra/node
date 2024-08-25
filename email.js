@@ -29,6 +29,7 @@ transporter.sendMail(mailOptions, (error, info) => {
 
 
 
+
 //------------------------------
 /*
 Transporter Object: This is the SMTP transporter you create using nodemailer.createTransport. It defines the SMTP server details, including authentication.
