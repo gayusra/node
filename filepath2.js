@@ -38,6 +38,10 @@ fs.writeFile(path.join(__dirname,'files','write.txt'), 'welcome to write page te
          
 })*/
 
+
+
+
+
 //---- async and await func ---------
 const fs = require('fs')
 const path = require('path')
@@ -50,6 +54,12 @@ const file = async ()=>{
         console.log('test')
         await fsPromises.writeFile(path.join(__dirname,'files','write.txt'),'welcome')
         console.log('write complete')
+        fs.unlink(path.join(__dirname,'files','testchnage.txt'),(err)=>{
+            if(err){
+                throw err
+            }
+            console.log('file deleted!')
+        })
 
     }catch(err){
       console.log(err)
